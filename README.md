@@ -4,13 +4,13 @@ A comprehensive weather dashboard application built with React, TypeScript, and 
 
 ## Features
 
-- 🌤️ Real-time weather data for multiple cities
-- 📊 Interactive charts for temperature, precipitation, and wind patterns
-- 🔐 Google OAuth authentication with Firebase
-- ⭐ Favorite cities with cloud sync
-- 🌡️ Celsius/Fahrenheit unit switching
-- 📱 Fully responsive design
-- ⚡ Optimized caching and performance
+-  Real-time weather data for multiple cities
+-  Interactive charts for temperature, precipitation, and wind patterns
+-  Google OAuth authentication with Firebase
+-  Favorite cities with cloud sync
+-  Celsius/Fahrenheit unit switching
+-  Fully responsive design
+-  Optimized caching and performance
 
 ## Tech Stack
 
@@ -144,17 +144,6 @@ export default defineConfig([
 - `npm run lint:fix` - Fix ESLint errors
 - `npm run type-check` - Run TypeScript type checking
 
-## Deployment
-
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions for Vercel and Netlify.
-
-### Quick Deploy
-
-#### Vercel
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
-
-#### Netlify
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy)
 
 ## Project Structure
 
