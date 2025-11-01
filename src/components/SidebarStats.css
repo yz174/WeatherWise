@@ -1,0 +1,205 @@
+.sidebar-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sidebar-stat-card {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-stat-card:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-stat-title {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 8px 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.sidebar-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Humidity Sidebar */
+.humidity-layout-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.humidity-value-section-sidebar {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.humidity-value-sidebar {
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.humidity-unit-sidebar {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.humidity-info-section-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.humidity-icon-sidebar {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.humidity-dew-text-sidebar {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Visibility Sidebar */
+.visibility-layout-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.visibility-value-section-sidebar {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.visibility-value-sidebar {
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.visibility-unit-sidebar {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.visibility-info-section-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.visibility-icon-circle-sidebar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.visibility-icon-sidebar {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.visibility-status-text-sidebar {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Feels Like Sidebar */
+.feels-like-layout-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.feels-like-value-section-sidebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feels-like-icon-sidebar {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.feels-like-value-sidebar {
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.feels-like-info-section-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.feels-like-status-text-sidebar {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sidebar-stats {
+    gap: 10px;
+  }
+
+  .sidebar-stat-card {
+    padding: 10px;
+  }
+
+  .humidity-value-sidebar,
+  .visibility-value-sidebar,
+  .feels-like-value-sidebar {
+    font-size: 40px;
+  }
+}

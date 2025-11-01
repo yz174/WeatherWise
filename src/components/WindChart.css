@@ -1,0 +1,137 @@
+.wind-chart {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.wind-chart:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wind-chart h4 {
+  margin: 0 0 15px 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Mobile: < 640px - Touch-friendly */
+@media (max-width: 639px) {
+  .wind-chart {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wind-chart h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .wind-chart .recharts-wrapper {
+    min-width: 600px;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .wind-chart {
+    padding: 18px;
+  }
+
+  .wind-chart h4 {
+    font-size: 17px;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .wind-chart {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .wind-chart h4 {
+    font-size: 20px;
+  }
+}
+
+.wind-tooltip {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-label {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.tooltip-time {
+  margin: 0 0 6px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.tooltip-speed {
+  margin: 0 0 4px 0;
+  color: #6c5ce7;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tooltip-direction {
+  margin: 0;
+  color: #a29bfe;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.wind-legend {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.arrow-icon {
+  font-size: 18px;
+  color: #6c5ce7;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .wind-chart {
+    padding: 15px;
+  }
+
+  .wind-chart h4 {
+    font-size: 16px;
+  }
+
+  .wind-legend {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,233 @@
+.forecast-section {
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.forecast-section h3 {
+  display: none;
+}
+
+.forecast-section.forecast-compact {
+  margin-bottom: 0;
+}
+
+.forecast-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+  .forecast-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .forecast-section h3 {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .forecast-section h3 {
+    font-size: 1.375rem;
+  }
+}
+
+.forecast-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-cards-compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.forecast-card {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.forecast-card-compact {
+  padding: 12px;
+  border-radius: 16px;
+  min-height: 160px;
+}
+
+.forecast-card-compact .forecast-icon {
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.forecast-card-compact .day-name {
+  font-size: 0.9rem;
+}
+
+.forecast-card-compact .day-date {
+  font-size: 0.75rem;
+}
+
+.forecast-card-compact .forecast-condition {
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.forecast-card-compact .forecast-temps {
+  font-size: 1rem;
+}
+
+.forecast-card-compact .forecast-precipitation {
+  font-size: 0.7rem;
+}
+
+/* Mobile: < 640px - Touch-friendly */
+@media (max-width: 639px) {
+  .forecast-card {
+    border-radius: 8px;
+    padding: 0.75rem;
+  }
+
+  .forecast-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .forecast-card:active {
+    transform: scale(0.98);
+  }
+}
+
+.forecast-day {
+  margin-bottom: 0.5rem;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.day-date {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forecast-icon {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.forecast-condition {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.forecast-temps {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.temp-high {
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.temp-divider {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.temp-low {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forecast-precipitation {
+  font-size: 0.875rem;
+  color: rgba(96, 165, 250, 0.9);
+}
+
+/* Responsive adjustments */
+/* Mobile: < 640px - Horizontal scroll for better UX */
+@media (max-width: 639px) {
+  .forecast-cards {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .forecast-card {
+    flex: 0 0 110px;
+    scroll-snap-align: start;
+  }
+
+  .forecast-icon {
+    font-size: 2rem;
+  }
+
+  .forecast-temps {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .forecast-cards {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.875rem;
+  }
+
+  .forecast-card {
+    padding: 0.875rem;
+  }
+
+  .forecast-icon {
+    font-size: 2.25rem;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .forecast-cards {
+    gap: 1.25rem;
+  }
+
+  .forecast-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+}

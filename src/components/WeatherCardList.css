@@ -1,0 +1,132 @@
+.weather-card-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mobile: < 640px - 1 column */
+@media (max-width: 639px) {
+  .weather-card-list {
+    gap: 12px;
+  }
+}
+
+/* Tablet: 640px - 1023px - 2 columns */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .weather-card-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop: 1024px - 1439px - 3 columns */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .weather-card-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Large desktop: > 1440px - 4 columns */
+@media (min-width: 1440px) {
+  .weather-card-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.empty-state:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.empty-state h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* Mobile empty state adjustments */
+@media (max-width: 639px) {
+  .empty-state {
+    padding: 32px 16px;
+    border-radius: 8px;
+  }
+
+  .empty-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+
+  .empty-state h3 {
+    font-size: 18px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+}
+
+/* Tablet empty state adjustments */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .empty-state {
+    padding: 48px 24px;
+  }
+
+  .empty-icon {
+    font-size: 56px;
+  }
+}
+
+/* Desktop empty state adjustments */
+@media (min-width: 1024px) {
+  .empty-state {
+    padding: 60px 32px;
+    border-radius: 16px;
+  }
+
+  .empty-icon {
+    font-size: 72px;
+    margin-bottom: 20px;
+  }
+
+  .empty-state h3 {
+    font-size: 24px;
+  }
+
+  .empty-state p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,67 @@
+.weekly-forecast-chart {
+  position: relative;
+  padding: 40px 20px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.temperature-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.temp-label-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .weekly-forecast-chart {
+    padding: 30px 16px 16px;
+  }
+
+  .chart-container {
+    height: 180px;
+  }
+
+  .temp-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .weekly-forecast-chart {
+    padding: 24px 12px 12px;
+  }
+
+  .chart-container {
+    height: 150px;
+  }
+
+  .temperature-labels {
+    gap: 4px;
+  }
+
+  .temp-value {
+    font-size: 16px;
+  }
+}

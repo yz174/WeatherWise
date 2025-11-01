@@ -1,0 +1,243 @@
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .search-input {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .search-input:focus {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile: < 640px - Touch-friendly */
+@media (max-width: 639px) {
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .search-input {
+    padding: 14px 16px;
+    font-size: 16px; /* Prevent zoom on iOS */
+    border-radius: 8px;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .search-input {
+    padding: 13px 16px;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .search-input {
+    padding: 14px 20px;
+    font-size: 17px;
+    border-radius: 16px;
+  }
+}
+
+.search-loading {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+[data-theme="dark"] .search-dropdown {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-dropdown-item {
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.search-dropdown-item:hover:not(.loading):not(.no-results):not(.error) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.search-dropdown-item.selected {
+  background-color: rgba(102, 126, 234, 0.3);
+  border-left: 3px solid #667eea;
+}
+
+[data-theme="dark"] .search-dropdown-item:hover:not(.loading):not(.no-results):not(.error) {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .search-dropdown-item.selected {
+  background-color: rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile: < 640px - Touch-friendly */
+@media (max-width: 639px) {
+  .search-dropdown {
+    border-radius: 8px;
+    max-height: 250px;
+  }
+
+  .search-dropdown-item {
+    padding: 14px 16px; /* Larger touch targets */
+    min-height: 48px;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .search-dropdown {
+    border-radius: 16px;
+    max-height: 350px;
+  }
+}
+
+.search-dropdown-item.loading {
+  cursor: default;
+  color: #666;
+  text-align: center;
+}
+
+.loading-dots::after {
+  content: '...';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%, 100% {
+    content: '...';
+  }
+}
+
+.search-dropdown-item.error {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: #fff5f5;
+  border-bottom: 2px solid #fee;
+}
+
+.search-error-icon {
+  font-size: 24px;
+}
+
+.search-error-message {
+  font-size: 14px;
+  color: #dc3545;
+  text-align: center;
+  font-weight: 500;
+}
+
+.search-dropdown-item.no-results {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.no-results-icon {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+.no-results-text {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.no-results-hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.city-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.city-details {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}

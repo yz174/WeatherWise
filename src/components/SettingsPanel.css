@@ -1,0 +1,181 @@
+.settings-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease-out;
+  min-width: 360px;
+}
+
+.settings-panel:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.settings-icon-img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.settings-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+  .settings-panel {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .settings-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .settings-panel {
+    padding: 18px;
+  }
+
+  .settings-title {
+    font-size: 17px;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .settings-panel {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .settings-title {
+    font-size: 20px;
+  }
+}
+
+.settings-group {
+  margin-bottom: 16px;
+}
+
+.settings-group:last-child {
+  margin-bottom: 0;
+}
+
+.settings-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.label-icon-img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.temperature-toggle,
+.theme-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 14px 28px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.6);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-button.active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.7);
+}
+
+.theme-toggle .toggle-button {
+  font-size: 20px;
+  padding: 10px 16px;
+}
+
+/* Mobile: < 640px - Touch-friendly */
+@media (max-width: 639px) {
+  .toggle-button {
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 6px;
+    min-height: 44px; /* Touch-friendly size */
+  }
+
+  .toggle-button:hover {
+    transform: none;
+  }
+
+  .toggle-button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .toggle-button {
+    padding: 11px 18px;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .toggle-button {
+    padding: 12px 24px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+}
