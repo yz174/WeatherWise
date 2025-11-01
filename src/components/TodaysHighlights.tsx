@@ -378,14 +378,14 @@ const TodaysHighlights = memo(({ currentWeather, hourlyData, timezone }: TodaysH
   );
 
   // Memoize frequently accessed values
-  const { windSpeed, uvIndex, humidity, visibility, feelsLike, temperature, dewPoint } = useMemo(() => ({
+  const { windSpeed, uvIndex } = useMemo(() => ({
     windSpeed: currentWeather.current.windSpeed,
     uvIndex: currentWeather.current.uvIndex,
-    humidity: currentWeather.current.humidity,
-    visibility: currentWeather.current.visibility,
-    feelsLike: currentWeather.current.feelsLike,
-    temperature: currentWeather.current.temperature,
-    dewPoint: currentWeather.current.dewPoint,
+    // humidity: currentWeather.current.humidity,
+    // visibility: currentWeather.current.visibility,
+    // feelsLike: currentWeather.current.feelsLike,
+    // temperature: currentWeather.current.temperature,
+    // dewPoint: currentWeather.current.dewPoint,
   }), [currentWeather.current]);
 
   // Memoize coordinates

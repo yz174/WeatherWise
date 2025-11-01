@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSearchCitiesQuery } from '../store/weatherApi';
-import { useAppDispatch } from '../store/hooks';
-import { addFavorite } from '../store/favoritesSlice';
+// import { useAppDispatch } from '../store/hooks';
+// import { addFavorite } from '../store/favoritesSlice';
 import { getErrorInfo } from '../utils/errorHandling';
 import type { City } from '../types/city.types';
 import './SearchBar.css';
@@ -13,7 +13,7 @@ const SearchBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const searchRef = useRef<HTMLDivElement>(null);
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   // Debounce search input (300ms delay)
