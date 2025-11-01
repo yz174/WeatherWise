@@ -21,9 +21,7 @@ export default defineConfig({
           'firebase-vendor': ['firebase/app', 'firebase/auth', 'firebase/firestore']
         }
       }
-    },
-    // Minify for production
-    minify: 'terser'
+    }
   },
   // Preview server configuration
   preview: {
