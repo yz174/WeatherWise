@@ -21,15 +21,16 @@ import eveningBg from '../assets/evening.png';
 import nightBg from '../assets/night.png';
 
 // Import weather icons
-import sunnyIcon from '../assets/weathericons/sunnyicon.png';
-import cloudyIcon from '../assets/weathericons/cloudyicon.png';
-import partiallyCloudyIcon from '../assets/weathericons/partiallycloudyicon.png';
-import rainIcon from '../assets/weathericons/rainicon.png';
-import heavyRainIcon from '../assets/weathericons/heavyrainicon.png';
-import drizzlingIcon from '../assets/weathericons/drizzlingicon.png';
-import snowIcon from '../assets/weathericons/snowicon.png';
-import thunderstormIcon from '../assets/weathericons/heavythunderstormicon.png';
-import windyIcon from '../assets/weathericons/windyicon.png';
+// Weather icons from public folder
+const sunnyIcon = '/weathericons/sunnyicon.png';
+const cloudyIcon = '/weathericons/cloudyicon.png';
+const partiallyCloudyIcon = '/weathericons/partiallycloudyicon.png';
+const rainIcon = '/weathericons/rainicon.png';
+const heavyRainIcon = '/weathericons/heavyrainicon.png';
+const drizzlingIcon = '/weathericons/drizzlingicon.png';
+const snowIcon = '/weathericons/snowicon.png';
+const thunderstormIcon = '/weathericons/heavythunderstormicon.png';
+const windyIcon = '/weathericons/windyicon.png';
 
 // Helper function to get time of day based on city's timezone
 function getTimeOfDay(timezone?: string): 'morning' | 'evening' | 'night' {

@@ -12,16 +12,17 @@ import './Dashboard.css';
 import dashboardBg from '../assets/dashboard background.png';
 
 // Import weather icons
-import sunnyIcon from '../assets/weathericons/sunnyicon.png';
-import cloudyIcon from '../assets/weathericons/cloudyicon.png';
-import partiallyCloudyIcon from '../assets/weathericons/partiallycloudyicon.png';
-import cloudyClearIcon from '../assets/weathericons/cloudyclearicon.png';
-import rainIcon from '../assets/weathericons/rainicon.png';
-import heavyRainIcon from '../assets/weathericons/heavyrainicon.png';
-import drizzlingIcon from '../assets/weathericons/drizzlingicon.png';
-import snowIcon from '../assets/weathericons/snowicon.png';
-import heavyThunderstormIcon from '../assets/weathericons/heavythunderstormicon.png';
-import windyIcon from '../assets/weathericons/windyicon.png';
+// Weather icons from public folder
+const sunnyIcon = '/weathericons/sunnyicon.png';
+const cloudyIcon = '/weathericons/cloudyicon.png';
+const partiallyCloudyIcon = '/weathericons/partiallycloudyicon.png';
+const cloudyClearIcon = '/weathericons/cloudyclearicon.png';
+const rainIcon = '/weathericons/rainicon.png';
+const heavyRainIcon = '/weathericons/heavyrainicon.png';
+const drizzlingIcon = '/weathericons/drizzlingicon.png';
+const snowIcon = '/weathericons/snowicon.png';
+const heavyThunderstormIcon = '/weathericons/heavythunderstormicon.png';
+const windyIcon = '/weathericons/windyicon.png';
 
 // Import stat icons
 import raindropIcon from '../assets/raindrops.png';
