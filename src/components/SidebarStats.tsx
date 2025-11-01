@@ -28,7 +28,7 @@ const SidebarStats = memo(({ currentWeather }: SidebarStatsProps) => {
               <span className="humidity-unit-sidebar">%</span>
             </div>
             <div className="humidity-info-section-sidebar">
-              <img src="/src/assets/raindrops.png" alt="Humidity" className="humidity-icon-sidebar" />
+              <img src="/raindrops.png" alt="Humidity" className="humidity-icon-sidebar" />
               <div className="humidity-dew-text-sidebar">
                 Dew point: {Math.round(convertTemp(dewPoint))}°{temperatureUnit === 'celsius' ? 'C' : 'F'}
               </div>
@@ -48,7 +48,7 @@ const SidebarStats = memo(({ currentWeather }: SidebarStatsProps) => {
             </div>
             <div className="visibility-info-section-sidebar">
               <div className="visibility-icon-circle-sidebar">
-                <img src="/src/assets/eye (1).png" alt="Visibility" className="visibility-icon-sidebar" />
+                <img src="/eye.png" alt="Visibility" className="visibility-icon-sidebar" />
               </div>
               <div className="visibility-status-text-sidebar">
                 {visibility < 5 ? 'Haze' : 'Clear'}
@@ -64,7 +64,7 @@ const SidebarStats = memo(({ currentWeather }: SidebarStatsProps) => {
         <div className="sidebar-stat-content">
           <div className="feels-like-layout-sidebar">
             <div className="feels-like-value-section-sidebar">
-              <img src="/src/assets/temperature-high.png" alt="Temperature" className="feels-like-icon-sidebar" />
+              <img src="/temperature-high.png" alt="Temperature" className="feels-like-icon-sidebar" />
               <span className="feels-like-value-sidebar">{Math.round(convertTemp(feelsLike))}°{temperatureUnit === 'celsius' ? 'C' : 'F'}</span>
             </div>
             <div className="feels-like-info-section-sidebar">

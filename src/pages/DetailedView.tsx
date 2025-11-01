@@ -313,7 +313,7 @@ const DetailedView = () => {
 
             {/* Location */}
             <div className="location-display">
-              <img src="/src/assets/location.png" alt="Location" className="location-icon-img" />
+              <img src="/location.png" alt="Location" className="location-icon-img" />
               <span className="location-text">
                 {currentWeather.cityName}, {currentWeather.country}
               </span>
@@ -321,7 +321,7 @@ const DetailedView = () => {
 
             {/* Date & Time */}
             <div className="datetime-display">
-              <img src="/src/assets/calendar-clock.png" alt="Date Time" className="datetime-icon-img" />
+              <img src="/calendar-clock.png" alt="Date Time" className="datetime-icon-img" />
               <span className="datetime-text">
                 {new Date().toLocaleDateString('en-US', { 
                   day: '2-digit', 
