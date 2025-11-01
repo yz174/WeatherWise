@@ -24,11 +24,11 @@ const snowIcon = '/weathericons/snowicon.png';
 const heavyThunderstormIcon = '/weathericons/heavythunderstormicon.png';
 const windyIcon = '/weathericons/windyicon.png';
 
-// Import stat icons
-import raindropIcon from '../assets/raindrops.png';
-import eyeIcon from '../assets/eye (1).png';
-import heartIcon from '../assets/heart.png';
-import settingsIcon from '../assets/settings.png';
+// Import stat icons from public folder
+const raindropIcon = '/raindrops.png';
+const eyeIcon = '/eye.png';
+const heartIcon = '/heart.png';
+const settingsIcon = '/settings.png';
 
 // Import favorite actions
 import { togglePinned } from '../store/favoritesSlice';

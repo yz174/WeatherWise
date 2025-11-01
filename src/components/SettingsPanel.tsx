@@ -3,9 +3,9 @@ import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { setTemperatureUnit } from '../store/settingsSlice';
 import './SettingsPanel.css';
 
-// Import icons
-import temperatureIcon from '../assets/temperature-high.png';
-import settingsIcon from '../assets/settings.png';
+// Import icons from public folder
+const temperatureIcon = '/temperature-high.png';
+const settingsIcon = '/settings.png';
 
 const SettingsPanel = () => {
   const dispatch = useAppDispatch();
